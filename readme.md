@@ -1,18 +1,18 @@
 # 中文取名
 
-### 例如：
-'''
-import chinesename
+## 例如：
 
-cnname=chinesename.ChineseName()
+    import chinesename
 
-name=cnname.getChineseName()
+    cnname=chinesename.ChineseName()
 
-print("name:\n",name)
-'''
+    name=cnname.getChineseName()
 
-### 输出：
-'''
-name:
- 上官袍
-'''
+    print("name:\n",name)
+
+
+
+## 输出：
+
+    name:
+    上官袍
