@@ -2,13 +2,13 @@
 
 ## 例如：
 ```python
-    import chinesename
+    import chinesename  # 导入包
 
-    cnname = chinesename.ChineseName()
+    cnname = chinesename.ChineseName()  # 实例化
 
-    name = cnname.getChineseName()
+    name = cnname.getChineseName()  # 获取中文名
 
-    print("name:\n", name)
+    print("name:\n", name)   # 输出测试
 ```
 
 
