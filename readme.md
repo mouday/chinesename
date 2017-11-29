@@ -4,11 +4,11 @@
 ```python
     import chinesename
 
-    cnname=chinesename.ChineseName()
+    cnname = chinesename.ChineseName()
 
-    name=cnname.getChineseName()
+    name = cnname.getChineseName()
 
-    print("name:\n",name)
+    print("name:\n", name)
 ```
 
 
