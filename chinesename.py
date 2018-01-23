@@ -5,6 +5,7 @@ import random
 import os
 
 class ChineseName(object):
+    """中文名取名"""
     def __init__(self, firstname_file="firstnames.txt", 
                         lastname_file="lastnames.txt"):
         """初始化
@@ -91,12 +92,29 @@ class ChineseName(object):
             names.append(self.getName(char_count,lastname))
         return names
 
+    def getNameGenerator(self, count, char_count=1, lastname=""):
+        """获取一个中文名字生成器，2018年1月22日
+        Args:
+            count: 名字数量 - Integer
+            char_count: 名字长度，默认1 - Integer
+            lastname： 姓氏，默认随机 - String
+        Returns:
+            Yield：姓名生成器
+        """
+        for i in range(count):
+            yield self.getName(char_count, lastname)
+        
+
 def main():
-    chinesename = ChineseName()     # 初始化
+    chinesename = ChineseName()     # 初始化，可以指定姓氏文件
     name = chinesename.getName(lastname="白")  # 获取一个姓名
     print(name)
     names=chinesename.getNames(100,char_count=2,lastname="彭")   # 获取一个姓名列表
     print(names)
+
+    name_generator = chinesename.getNameGenerator(1000)
+    for name in name_generator:
+        print(name)
 
 
 if __name__ == '__main__':
