@@ -4,6 +4,12 @@
 
 pypi地址： https://pypi.python.org/pypi/chinesename
 
+## 安装模块
+
+```
+pip install chinesename
+```
+
 ## 代码示例：
 
 ```python
