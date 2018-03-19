@@ -6,7 +6,7 @@ pypi地址： https://pypi.python.org/pypi/chinesename
 
 ## 代码示例：
 
-```
+```python
 >>> from chinesename import chinesename  # 导入包
 
 >>> dir(chinesename.ChineseName)  # 查看函数
