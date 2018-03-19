@@ -2,6 +2,8 @@
 ## 说明
 项目包含了常用于名字的2812个汉字，常用的姓氏504个
 
+pypi地址： https://pypi.python.org/pypi/chinesename
+
 ## 代码示例：
 
 ```
