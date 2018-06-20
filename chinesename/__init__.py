@@ -5,3 +5,5 @@
 # @Author  : Peng Shiyu
 
 from .chinesename import ChineseName
+
+__all__ = ["ChineseName"]

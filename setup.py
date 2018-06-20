@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="chinesename",
-    version="0.0.6",
+    version="0.0.7",
     author="Peng Shiyu",
     author_email="pengshiyuyx@gmail.com",
     description="get a chinesename by random",
@@ -18,4 +18,8 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ),
+    package_data = {
+            # If any package contains *.txt or *.rst files, include them:
+            '': ['source/*.txt', "source/*.json"],
+    }
 )
