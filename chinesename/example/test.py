@@ -12,3 +12,5 @@ print(cnname.getNames.__doc__)  # 测试__doc__
 
 print(len(cnname._firstnames))
 print(len(cnname._lastnames))
+
+print(help(chinesename.ChineseName))
