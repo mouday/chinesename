@@ -8,9 +8,10 @@ import os
 # 限定可见方法
 __all__ = ["ChineseName"]
 
-#================
+# ================
 # 资源文件
-#================
+# ================
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 LASTFILE = os.path.join(BASE_DIR, "source/lastnames.txt")
@@ -20,9 +21,10 @@ BOYFILE = os.path.join(BASE_DIR, "source/boy.json")
 GIRLFILE = os.path.join(BASE_DIR, "source/girl.json")
 
 
-#===================
+# ===================
 # 主体代码
-#===================
+# ===================
+
 class ChineseName(object):
     """中文名取名"""
     def __init__(self, firstname_file=FIRSTFILE, lastname_file=LASTFILE):
@@ -50,7 +52,7 @@ class ChineseName(object):
             file not find
         """
         if os.path.exists(filename):
-            with open(filename, "r") as f:
+            with open(filename, "r", encoding="utf-8") as f:
                 chars = f.read().split(" ")
                 return chars
         else:
@@ -61,11 +63,11 @@ class ChineseName(object):
         加载男孩女孩名字
         """
         # 加载男孩名字 {dict}
-        with open(BOYFILE, "r") as f:
+        with open(BOYFILE, "r", encoding="utf-8") as f:
             self._boy_firstnames = json.loads(f.read())
 
         # 加载女孩名字 {dict}
-        with open(GIRLFILE, "r") as f:
+        with open(GIRLFILE, "r", encoding="utf-8") as f:
             self._girl_firstnames = json.loads(f.read())
 
     def getLastName(self):

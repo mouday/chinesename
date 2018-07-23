@@ -2,6 +2,7 @@ import setuptools
 import os
 import requests
 
+
 # 将markdown格式转换为rst格式
 def md_to_rst(from_file, to_file):
     r = requests.post(url='http://c.docverter.com/convert',
@@ -16,11 +17,11 @@ md_to_rst("README.md", "README.rst")
 
 long_description = 'Add a fallback short description here'
 if os.path.exists('README.rst'):
-    long_description = open('README.rst').read()
+    long_description = open('README.rst', encoding="utf-8").read()
 
 setuptools.setup(
     name="chinesename",
-    version="0.0.8",
+    version="0.0.9",
     author="Peng Shiyu",
     author_email="pengshiyuyx@gmail.com",
     description="get a chinesename by random",
@@ -36,6 +37,6 @@ setuptools.setup(
     install_requires = [],       # 常用
     package_data = {
             # If any package contains *.txt or *.rst files, include them:
-            'source': ['*.txt', "*.json"],
+            'chinesename': ['source/*.txt', "source/*.json"],
     }
 )
