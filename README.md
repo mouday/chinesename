@@ -45,13 +45,17 @@ pip install chinesename
 ```
 
 ## 更新记录
+
+2018年1月22日 增加姓名生成器函数，getNameGenerator()
+
+
+2018年3月19日 修复导入lastnames 和 firstname 文件失败的问题，将两文件内容直接写到chinesename中，并删除两文件
+
+
 2018年6月20日 修复资源文件导入问题，增加性别参数，区分男孩姓名和女孩姓名
 感谢 JoffreyN 提出的建议 [古语云：男楚辞，女诗经。名可以从诗经、楚辞里面取](https://github.com/mouday/chinesename/issues/2)
 在原有基础上进行了扩展
 遗留问题：取词不准确，需要进一步优化
 
-## 更新记录
-2018年3月19日 修复导入lastnames 和 firstname 文件失败的问题，将两文件内容直接写到chinesename中，并删除两文件
 
-## 更新记录
-2018年1月22日 增加姓名生成器函数，getNameGenerator()
+2018年7月23日 修复文件open时引发的编码问题，增加参数：encoding="utf-8"
