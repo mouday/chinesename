@@ -1,4 +1,6 @@
 # 中文取名
+[![Build Status](https://travis-ci.org/mouday/chinesename.svg?branch=master)](https://travis-ci.org/mouday/chinesename)
+
 ## 说明
 项目包含《百家姓》姓氏504个，常用于名字的汉字2812个
 名字汉字中包含大部分《楚辞》、《诗经》词汇
