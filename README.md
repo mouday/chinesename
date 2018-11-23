@@ -63,3 +63,5 @@ pip install chinesename
 
 
 2018年7月23日 修复文件open时引发的编码问题，增加参数：encoding="utf-8"
+
+2018年11月23日 修复pyhton2下安装报错'IOError: [Errno 2] No such file or directory: "README.md"'的问题
