@@ -51,6 +51,9 @@ cn.getName(sex="boy")  # 设置性别 （boy | girl）
 
 ## 更新记录
 
+v0.1.1（2023年07月24日）
+- 修复安装失败的问题
+
 2018年1月22日 增加姓名生成器函数，getNameGenerator()
 
 
