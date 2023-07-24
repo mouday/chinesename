@@ -199,18 +199,3 @@ class ChineseName(object):
         """
         for i in range(count):
             yield self.getName(char_count, lastname, sex)
-        
-
-def main():
-    chinesename = ChineseName()     # 初始化，可以指定姓氏文件
-    name = chinesename.getName(lastname="白", sex="boy")  # 获取一个姓名
-    print(name)
-    names=chinesename.getNames(100,char_count=2,lastname="彭")   # 获取一个姓名列表
-    print(names)
-
-    # 获取一个姓名生成器
-    name_generator = chinesename.getNameGenerator(10)
-    print(name_generator)
-
-if __name__ == '__main__':
-    main()

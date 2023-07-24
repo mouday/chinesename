@@ -1,0 +1,33 @@
+# 打包
+.PHONY: build
+build:
+	python setup.py sdist bdist_wheel --python-tag py2.py3
+
+# 清空打包产物
+.PHONY: clean
+clean:
+	rm -rf temp logs .pytest_cache
+	rm -rf dist build *.egg-info
+
+# 上传打包产物到 pypi
+.PHONY: upload
+upload:
+	twine check dist/*
+	twine upload dist/*
+
+# 发布 make publish
+.PHONY: publish
+publish:
+	make clean
+	make build
+	make upload
+	make clean
+
+# 运行所有测试
+.PHONY: test
+test:
+	pytest -c pytest.ini tests/api/test_index.py
+
+.PHONY: install-require
+install-require:
+	pip install --upgrade setuptools wheel twine

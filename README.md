@@ -1,9 +1,10 @@
 # 中文取名
-[![Build Status](https://travis-ci.org/mouday/chinesename.svg?branch=master)](https://travis-ci.org/mouday/chinesename)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/chinesename)](https://pypi.org/project/chinesename)
 [![PyPI](https://img.shields.io/pypi/v/chinesename.svg)](https://pypi.org/project/chinesename/)
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/chinesename.svg)
 
 ## 说明
+
 项目包含《百家姓》姓氏504个，常用于名字的汉字2812个
 名字汉字中包含大部分《楚辞》、《诗经》词汇
 
@@ -18,32 +19,32 @@ pip install chinesename
 ## 代码示例：
 
 ```python
->>> from chinesename import ChineseName  # 导包
+from chinesename import ChineseName  # 导包
 
->>> cn = ChineseName()  # 实例化
+cn = ChineseName()  # 实例化
 
->>> cn.getName()  # 获取一个姓名
+cn.getName()  # 获取一个姓名
 '广袁'
 
->>> cn.getNames(10)  # 获取多个姓名
+cn.getNames(10)  # 获取多个姓名
 ['笪递', '慎彭徨', '席具', '锺谦', '任西', '公羊狱', '华桑', '利节', '燕角', '任彪']
 
->>> cn.getNameGenerator(10)  # 获取生成器
+cn.getNameGenerator(10)  # 获取生成器
 <generator object ChineseName.getNameGenerator at 0x1045cfa40>
 
->>> cn.getLastName()  # 获取姓氏
+cn.getLastName()  # 获取姓氏
 '舒'
 
->>> cn.getFirstName()  # 获取名字
+cn.getFirstName()  # 获取名字
 '崔'
 
->>> cn.getName(lastname="彭")  # 设置姓氏
+cn.getName(lastname="彭")  # 设置姓氏
 '彭圭'
 
->>> cn.getName(char_count=2)  # 设置名字长度
+cn.getName(char_count=2)  # 设置名字长度
 '倪吏渚'
 
->>> cn.getName(sex="boy")  # 设置性别 （boy | girl）
+cn.getName(sex="boy")  # 设置性别 （boy | girl）
 '骆留'
 
 ```
