@@ -47,6 +47,15 @@ cn.getName(char_count=2)  # 设置名字长度
 cn.getName(sex="boy")  # 设置性别 （boy | girl）
 '骆留'
 
+
+如果想输出拼音，参考以下方法 
+name = cn.getName() #获取名字
+printNamePinyin(name) #输出拼音和名字
+nameList = cn.getNames(10)
+printNamePinyin(nameList) #支持列表和字符串
+printNamePinyin(cn.getNames(4)) #支持连续调用
+祁玄 qí-xuán,瞿拉 qú-lā,穆懿 mù-yì,邬辅 wū-fǔ,
+
 ```
 
 ## 更新记录

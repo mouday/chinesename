@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-
+from xpinyin import pinyin
 import json
 import random
 import os
@@ -199,3 +199,22 @@ class ChineseName(object):
         """
         for i in range(count):
             yield self.getName(char_count, lastname, sex)
+
+def printNamePinyin(namestring): 
+    """输出获取到的名字及其对应的拼音
+    Args:
+        namestring: {str}/{list} 姓名/姓名列表
+    Returns:
+        None
+    """
+    p = Pinyin() #实例化拼音对象
+    if_list = isinstance(namestring,str)
+    if if_list :
+        print(namestring,p.get_pinyin(namestring,tone_marks = 'marks'))
+        return 0
+    for i in namestring:
+        print(i,p.get_pinyin(i,tone_marks = 'marks'),end=",")
+        if i == namestring[-1]:
+            print("")
+    return 0
+
